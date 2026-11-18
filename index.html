@@ -3,110 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>18 Kasım • Dünya Prensesler Günün Kutlu Olsun</title>
-  <meta name="description" content="18 Kasım Dünya Prensesler Günü için kasımpatılar ve sevgiyle hazırlanmış özel masal." />
+  <title>18 Kasım • Prensesler Günün Kutlu Olsun En Güzelim</title>
+  <meta name="description" content="18 Kasım Dünya Prensesler Günü için özel kasımpatı sürprizi." />
 
-  <!-- Google Fonts (Türkçe karakter / latin-ext destekli zarif serif, el yazısı ve gövde fontları) -->
+  <!-- Google Fonts (Türkçe karakter destekli zarif serif ve el yazısı) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Paylaşılan SVG Gradient ve Parıltı Tanımları -->
+  <!-- Paylaşılan SVG Renk Geçişleri -->
   <svg width="0" height="0" class="svg-defs" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="gold-foil-grad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#F7E7B4" />
-        <stop offset="45%" stop-color="#D4AF37" />
-        <stop offset="75%" stop-color="#F1D57A" />
-        <stop offset="100%" stop-color="#AA8022" />
-      </linearGradient>
-      <linearGradient id="crown-gem-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#F5A6BE" />
-        <stop offset="100%" stop-color="#B93E67" />
+        <stop offset="50%" stop-color="#D4AF37" />
+        <stop offset="100%" stop-color="#9E7418" />
       </linearGradient>
       <radialGradient id="wax-disc-grad" cx="38%" cy="32%" r="68%">
         <stop offset="0%" stop-color="#E87A9A" />
         <stop offset="55%" stop-color="#B54067" />
         <stop offset="100%" stop-color="#762140" />
       </radialGradient>
+      <linearGradient id="stem-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#4A644E" />
+        <stop offset="55%" stop-color="#5E8064" />
+        <stop offset="100%" stop-color="#749B7B" />
+      </linearGradient>
+      <linearGradient id="root-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#6B5344" />
+        <stop offset="100%" stop-color="#A1836D" />
+      </linearGradient>
+      <linearGradient id="leaf-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#47664C" />
+        <stop offset="100%" stop-color="#759A7B" />
+      </linearGradient>
+      <radialGradient id="flower-aura-grad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#E88D8A" stop-opacity="0.28" />
+        <stop offset="60%" stop-color="#F3E5AB" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#FFF9F6" stop-opacity="0" />
+      </radialGradient>
     </defs>
   </svg>
 
-  <!-- Arka Plan Partikül ve Konfeti Canvas'ı -->
-  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <main class="experience-viewport">
+    <!-- AŞAMA 1: SADE KRALİYET ZARFI & MÜHÜR -->
+    <section id="seal-stage" class="seal-stage" aria-label="Mühürlü Zarf">
+      <div class="envelope-container">
+        <p class="seal-eyebrow" data-config="dateBadge">18 KASIM • DÜNYA PRENSESLER GÜNÜ</p>
 
-  <!-- SAHNE 1: BÜYÜLÜ KRALİYET ZARFI & BALMUMU MÜHÜR -->
-  <section id="envelope-stage" class="envelope-stage" aria-label="Kraliyet Mektup Zarfı Girişi">
-    <div class="envelope-ambient-glow" aria-hidden="true"></div>
-
-    <div class="envelope-container">
-      <header class="envelope-header">
-        <span class="envelope-eyebrow" data-config="dateBadge">18 KASIM • DÜNYA PRENSESLER GÜNÜ</span>
-        <p class="envelope-intro-line">Senin için özenle mühürlenmiş bir Kasım masalı...</p>
-      </header>
-
-      <div class="envelope-scene">
         <div id="envelope-wrapper" class="envelope-wrapper">
-          <!-- Zarfın Arka Yüzü -->
           <div class="envelope-back" aria-hidden="true"></div>
 
-          <!-- Zarfın İçinden Yükselecek Ön İzleme Kartı -->
-          <div class="envelope-letter-preview" aria-hidden="true">
-            <div class="preview-inner-border">
-              <div class="preview-crown">👑</div>
-              <p class="preview-script" data-config="princessTitle">Benim Güzel Prensesim</p>
-              <span class="preview-note">Kasımpatılar kadar zarif günün kutlu olsun...</span>
-            </div>
-          </div>
-
-          <!-- Zarfın Ön Cephesi (Sol, Sağ, Alt Katmanlar) -->
           <div class="envelope-pocket" aria-hidden="true">
             <div class="envelope-flap-left"></div>
             <div class="envelope-flap-right"></div>
             <div class="envelope-flap-bottom"></div>
-            <div class="envelope-front-plate">
-              <div class="envelope-corner-floral left" data-chrysanthemum="rose" data-size="54"></div>
-              <div class="envelope-corner-floral right" data-chrysanthemum="gold" data-size="54"></div>
-              <p class="envelope-to-label">
-                <span class="to-prefix">Sadece</span>
-                <span class="to-script" data-config="envelopeTo">Benim Güzel Prensesim İçin</span>
-              </p>
-            </div>
+            <p class="envelope-to-label" data-config="envelopeTo">En Güzelim İçin</p>
           </div>
 
-          <!-- Üst Zarf Kapağı (3B Katlanır) -->
           <div class="envelope-top-flap" aria-hidden="true">
             <div class="envelope-top-flap-inner"></div>
           </div>
 
-          <!-- Kasımpatı & Taç Kabartmalı Balmumu Mühür Butonu -->
           <button
             type="button"
             id="wax-seal-btn"
             class="wax-seal-btn"
-            aria-label="Kraliyet mührünü kır ve sürprizi aç"
+            aria-label="Mührü kırmak için dokun"
           >
             <span class="seal-aura" aria-hidden="true"></span>
             <span class="seal-disc" aria-hidden="true">
               <svg viewBox="0 0 100 100" class="seal-svg">
                 <circle cx="50" cy="50" r="46" fill="url(#wax-disc-grad)" stroke="#F3E5AB" stroke-width="2" stroke-opacity="0.7" />
                 <circle cx="50" cy="50" r="38" fill="none" stroke="#F7E7B4" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.65" />
-                <!-- Kasımpatı taç yaprak çelengi kabartması -->
-                <g fill="#F7E7B4" fill-opacity="0.28" transform="translate(50 50)">
-                  <ellipse rx="5" ry="19" transform="rotate(0)" />
-                  <ellipse rx="5" ry="19" transform="rotate(30)" />
-                  <ellipse rx="5" ry="19" transform="rotate(60)" />
-                  <ellipse rx="5" ry="19" transform="rotate(90)" />
-                  <ellipse rx="5" ry="19" transform="rotate(120)" />
-                  <ellipse rx="5" ry="19" transform="rotate(150)" />
-                </g>
-                <!-- Ortadaki Taç Kabartması -->
                 <path
                   d="M29 61 L33 41 L43 50 L50 34 L57 50 L67 41 L71 61 Z M30 64 H70 V68 H30 Z"
                   fill="url(#gold-foil-grad)"
@@ -119,267 +94,107 @@
           </button>
         </div>
 
-        <p id="seal-hint" class="seal-hint">
-          <span class="seal-hint-dot" aria-hidden="true">✦</span>
-          Mührü Kırmak İçin Dokun
-          <span class="seal-hint-dot" aria-hidden="true">✦</span>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SAHNE 2-6: ANA MASAL DENEYİMİ -->
-  <main id="main-experience" class="main-experience is-hidden" aria-hidden="true">
-    <!-- Üst Zarif Kraliyet Çubuğu -->
-    <nav class="royal-topbar" aria-label="Sayfa bölümleri">
-      <span class="topbar-brand">
-        <span aria-hidden="true">👑</span>
-        <span data-config="topbarTitle">18 Kasım Masalı</span>
-      </span>
-      <div class="topbar-links">
-        <a href="#letter-section">Mektup</a>
-        <a href="#reasons-section">Sebepler</a>
-        <a href="#garden-section">Kasımpatılar</a>
-        <a href="#finale-section">Taç Töreni</a>
-      </div>
-    </nav>
-
-    <!-- SAHNE 2: HERO BÖLÜMÜ -->
-    <section id="hero" class="hero-section">
-      <div class="hero-inner">
-        <div class="hero-crest" aria-hidden="true">
-          <div class="hero-flower-left" data-chrysanthemum="rose" data-size="92"></div>
-
-          <div class="hero-crown-wrap">
-            <svg viewBox="0 0 180 120" class="hero-crown-svg">
-              <!-- Yumuşak Taç Halesi -->
-              <ellipse cx="90" cy="82" rx="64" ry="18" fill="#D4AF37" fill-opacity="0.16" />
-              <!-- İnci Taç Tepeleri -->
-              <circle cx="28" cy="40" r="5.5" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <circle cx="56" cy="25" r="6" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <circle cx="90" cy="15" r="7.5" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.8" />
-              <circle cx="124" cy="25" r="6" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <circle cx="152" cy="40" r="5.5" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <!-- Taç Gövdesi -->
-              <path
-                d="M32 88 L28 45 L55 64 L57 31 L77 56 L90 22 L103 56 L123 31 L125 64 L152 45 L148 88 Z"
-                fill="url(#gold-foil-grad)"
-                stroke="#9E7418"
-                stroke-width="1.5"
-                stroke-linejoin="round"
-              />
-              <!-- İç Telkari Kemerler -->
-              <path
-                d="M42 84 Q60 66 76 84 Q90 60 104 84 Q120 66 138 84"
-                fill="none"
-                stroke="#FFF7DF"
-                stroke-width="1.6"
-                stroke-opacity="0.7"
-              />
-              <!-- Alt Taç Bandı -->
-              <rect x="29" y="86" width="122" height="14" rx="7" fill="url(#gold-foil-grad)" stroke="#9E7418" stroke-width="1.4" />
-              <!-- Değerli Taşlar -->
-              <ellipse cx="90" cy="64" rx="7.5" ry="10" fill="url(#crown-gem-grad)" stroke="#FFF7DF" stroke-width="1.3" />
-              <circle cx="58" cy="70" r="4.5" fill="url(#crown-gem-grad)" stroke="#FFF7DF" stroke-width="1" />
-              <circle cx="122" cy="70" r="4.5" fill="url(#crown-gem-grad)" stroke="#FFF7DF" stroke-width="1" />
-              <circle cx="48" cy="93" r="3" fill="#FFF8EC" />
-              <circle cx="69" cy="93" r="3" fill="#E87A9A" />
-              <circle cx="90" cy="93" r="3.5" fill="#FFF8EC" />
-              <circle cx="111" cy="93" r="3" fill="#E87A9A" />
-              <circle cx="132" cy="93" r="3" fill="#FFF8EC" />
-            </svg>
-          </div>
-
-          <div class="hero-flower-right" data-chrysanthemum="gold" data-size="92"></div>
-        </div>
-
-        <span class="royal-badge" data-config="dateBadge">18 KASIM • DÜNYA PRENSESLER GÜNÜ</span>
-
-        <h1 class="hero-title">
-          <span class="hero-title-main" data-config="heroTitle">Dünya Prensesler Günün Kutlu Olsun</span>
-          <span class="hero-title-script" data-config="princessTitle">Benim Güzel Prensesim</span>
-        </h1>
-
-        <p class="hero-subtitle" data-config="heroSubtitle">
-          Kasım'ın en zarif çiçeği kasımpatı, hayatımın en güzel mucizesi sensin.
-          Gülüşünle her mevsimi bahara çevirdiğin için teşekkür ederim.
-        </p>
-
-        <div class="hero-keepsake-pill">
-          <span class="pill-flower" aria-hidden="true">🌸</span>
-          <span data-config="keepsakeBadge">Kasım'ın Kasımpatı Masalı • Sana Özel Hazırlandı</span>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#letter-section" class="btn-royal btn-primary">
-            Masalını Keşfet <span aria-hidden="true">↓</span>
-          </a>
-        </div>
+        <p id="seal-hint" class="seal-hint">Mührü Kırmak İçin Dokun</p>
       </div>
     </section>
 
-    <!-- SAHNE 3: ROMANTİK KRALİYET MEKTUBU -->
-    <section id="letter-section" class="section-block reveal-on-scroll">
-      <div class="section-heading">
-        <span class="section-eyebrow">KRALİYET MEKTUBU</span>
-        <h2 class="section-title">Kalbimden Senin Kalbine</h2>
-      </div>
-
-      <article class="letter-card">
-        <div class="corner-bloom top-left" data-chrysanthemum="ivory" data-size="112" aria-hidden="true"></div>
-        <div class="corner-bloom bottom-right" data-chrysanthemum="rose" data-size="118" aria-hidden="true"></div>
-
-        <div class="letter-inner-frame">
-          <p class="letter-greeting" data-config="letterGreeting">Benim Güzel Prensesim,</p>
-
-          <div id="letter-body" class="letter-body">
-            <!-- Paragraflar script.js içindeki SITE_CONFIG üzerinden doldurulur -->
-          </div>
-
-          <div class="letter-footer">
-            <p class="letter-signature" data-config="letterSignature">Seni her şeyden çok seven...</p>
-            <span class="letter-date" data-config="letterDate">18 Kasım 2026</span>
-          </div>
-        </div>
-      </article>
-
-      <div class="letter-actions">
-        <button type="button" id="drop-petals-btn" class="btn-royal btn-secondary">
-          Kasımpatı Yaprağı Bırak 🌸
-        </button>
-        <p id="petal-toast" class="petal-toast" aria-live="polite"></p>
-      </div>
-    </section>
-
-    <!-- SAHNE 4: NEDEN BENİM PRENSESİMSİN? (6'LI İNTERAKTİF KARTLAR) -->
-    <section id="reasons-section" class="section-block reveal-on-scroll">
-      <div class="section-heading">
-        <span class="section-eyebrow">ALTI ÖZEL SEBEP</span>
-        <h2 class="section-title">Neden Benim Prensesimsin?</h2>
-        <p class="section-subtitle">Her kasımpatı mühürlü kartın arkasında sana özel bir cümle saklı...</p>
-      </div>
-
-      <div class="reasons-toolbar">
-        <span id="reasons-counter" class="reasons-counter">0 / 6 Sürpriz Açıldı</span>
-        <button type="button" id="flip-all-btn" class="btn-text-link">Tümünü Çevir</button>
-      </div>
-
-      <div id="reasons-grid" class="reasons-grid">
-        <!-- 6'lı 3B Çevrilebilir Kartlar script.js tarafından oluşturulur -->
-      </div>
-    </section>
-
-    <!-- SAHNE 5: İNTERAKTİF SANA ÖZEL KASIMPATI BAHÇESİ -->
-    <section id="garden-section" class="section-block reveal-on-scroll">
-      <div class="section-heading">
-        <span class="section-eyebrow">KASIM AYININ EN GÜZEL ÇİÇEĞİ</span>
-        <h2 class="section-title">Sana Özel Kasımpatı Bahçesi</h2>
-        <p class="section-subtitle">
-          Kasımpatıları ne kadar çok sevdiğini biliyorum. Bahçede dilediğin yere dokun, senin için taze kasımpatılar açsın.
-        </p>
-      </div>
-
-      <div class="garden-card">
-        <div class="garden-hud">
-          <p id="garden-compliment" class="garden-compliment" aria-live="polite">
-            Bahçeye dokun veya "Kasımpatı Açtır" butonuna bas 🌸
-          </p>
-          <span id="garden-count-badge" class="garden-count-badge">Açan Kasımpatı: 0</span>
-        </div>
-
-        <div
-          id="garden-stage"
-          class="garden-stage"
-          tabindex="0"
-          role="button"
-          aria-label="İnteraktif Kasımpatı Bahçesi. Yeni bir kasımpatı açtırmak için dokunun veya tıklayın."
+    <!-- AŞAMA 2: KÖKTEN BÜYÜYEN KASIMPATI & KUTLAMA MESAJI -->
+    <section id="bloom-stage" class="bloom-stage is-hidden" aria-hidden="true">
+      <div class="plant-stage">
+        <svg
+          id="chrysanthemum-plant"
+          class="chrysanthemum-plant"
+          viewBox="0 0 360 480"
+          role="img"
+          aria-label="Kökten başlayarak büyüyen kasımpatı çiçeği"
         >
-          <!-- Gece Sarayı Bahçesi Ay Işığı ve Çimen Silüeti -->
-          <div class="garden-moon" aria-hidden="true"></div>
-          <div class="garden-stars" aria-hidden="true"></div>
+          <!-- Çiçek Arkası Yumuşak Işık Halesi -->
+          <circle class="flower-aura" cx="180" cy="154" r="132" fill="url(#flower-aura-grad)" />
 
-          <svg viewBox="0 0 1000 180" preserveAspectRatio="none" class="garden-hills" aria-hidden="true">
-            <path d="M0,115 Q240,65 510,110 T1000,90 L1000,180 L0,180 Z" fill="#233829" fill-opacity="0.72" />
-            <path d="M0,135 Q310,95 660,135 T1000,120 L1000,180 L0,180 Z" fill="#18291E" />
-          </svg>
+          <!-- Toprak / Kök Çizgisi -->
+          <ellipse class="soil-shadow" cx="180" cy="414" rx="68" ry="8" fill="#8C6E63" fill-opacity="0.2" />
 
-          <!-- Açan SVG Kasımpatı Çiçekleri Katmanı -->
-          <div id="garden-flowers-layer" class="garden-flowers-layer" aria-hidden="true"></div>
-        </div>
+          <!-- Kökler (Adım 1: Kökten Başlayarak Çizilir) -->
+          <g class="roots-group" fill="none" stroke="url(#root-grad)" stroke-linecap="round">
+            <path class="root-path root-1" stroke-width="3.6" d="M180 412 Q176 436 182 464" />
+            <path class="root-path root-2" stroke-width="2.7" d="M180 414 Q157 429 135 451" />
+            <path class="root-path root-3" stroke-width="2.1" d="M161 428 Q152 444 146 458" />
+            <path class="root-path root-4" stroke-width="2.7" d="M180 414 Q204 429 225 451" />
+            <path class="root-path root-5" stroke-width="2.1" d="M199 428 Q208 443 214 458" />
+          </g>
 
-        <div class="garden-controls">
-          <button type="button" id="bloom-flower-btn" class="btn-royal btn-primary">
-            Kasımpatı Açtır 🌸
-          </button>
-          <button type="button" id="clear-garden-btn" class="btn-royal btn-ghost">
-            Bahçeyi Tazele
-          </button>
-        </div>
+          <!-- Ana Gövde / Sap (Adım 2: Kökten Yukarıya Uzar) -->
+          <path
+            id="stem-path"
+            class="stem-path"
+            d="M180 414 C172 342 190 250 180 162"
+            fill="none"
+            stroke="url(#stem-grad)"
+            stroke-width="6.5"
+            stroke-linecap="round"
+          />
+
+          <!-- Kasımpatı Gövde Yaprakları (Adım 3: Düğüm Noktalarından Filizlenir) -->
+          <g class="stem-leaves">
+            <!-- Sol Alt Yaprak -->
+            <g class="leaf-node leaf-left-1" transform="translate(177 338)">
+              <g class="leaf-inner">
+                <path
+                  d="M0,0 C-14,-4 -26,-16 -42,-16 C-38,-22 -46,-30 -58,-28 C-56,-36 -66,-44 -78,-40 C-74,-26 -62,-18 -56,-14 C-66,-10 -70,0 -58,6 C-44,6 -32,0 -22,4 C-14,7 -6,4 0,0 Z"
+                  fill="url(#leaf-grad)"
+                />
+                <path d="M-2,-1 Q-34,-18 -68,-34" fill="none" stroke="#9DC0A2" stroke-width="1.2" stroke-opacity="0.65" />
+              </g>
+            </g>
+
+            <!-- Sağ Orta Yaprak -->
+            <g class="leaf-node leaf-right-1" transform="translate(183 288)">
+              <g class="leaf-inner">
+                <path
+                  d="M0,0 C14,-5 26,-17 42,-17 C38,-23 46,-31 58,-29 C56,-37 66,-45 78,-41 C74,-27 62,-19 56,-15 C66,-11 70,-1 58,5 C44,5 32,-1 22,3 C14,6 6,4 0,0 Z"
+                  fill="url(#leaf-grad)"
+                />
+                <path d="M2,-1 Q34,-18 68,-35" fill="none" stroke="#9DC0A2" stroke-width="1.2" stroke-opacity="0.65" />
+              </g>
+            </g>
+
+            <!-- Sol Üst Küçük Yaprak -->
+            <g class="leaf-node leaf-left-2" transform="translate(182 232) scale(0.76)">
+              <g class="leaf-inner">
+                <path
+                  d="M0,0 C-14,-4 -26,-16 -42,-16 C-38,-22 -46,-30 -58,-28 C-56,-36 -66,-44 -78,-40 C-74,-26 -62,-18 -56,-14 C-66,-10 -70,0 -58,6 C-44,6 -32,0 -22,4 C-14,7 -6,4 0,0 Z"
+                  fill="url(#leaf-grad)"
+                />
+                <path d="M-2,-1 Q-34,-18 -68,-34" fill="none" stroke="#9DC0A2" stroke-width="1.2" stroke-opacity="0.65" />
+              </g>
+            </g>
+          </g>
+
+          <!-- Kasımpatı Çiçek Başı (Adım 4: Katman Katman Açar) -->
+          <g class="flower-head-anchor" transform="translate(180 154)">
+            <g class="flower-head-sway">
+              <!-- Çanak Yapraklar -->
+              <g class="flower-calyx">
+                <path d="M-12,8 Q-24,22 -36,16 Q-22,4 -10,2 Z" fill="#5B7E61" />
+                <path d="M12,8 Q24,22 36,16 Q22,4 10,2 Z" fill="#5B7E61" />
+                <path d="M-6,10 Q0,26 6,10 Z" fill="#4B6B51" />
+              </g>
+
+              <!-- 4 Katmanlı Taç Yapraklar & Merkez (script.js tarafından doldurulur) -->
+              <g id="flower-petals-group"></g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- AŞAMA 3: ÇİÇEK AÇTIKTAN SONRA BELİREN MESAJ -->
+      <div class="bloom-message-box">
+        <p class="bloom-date" data-config="dateBadge">18 KASIM • DÜNYA PRENSESLER GÜNÜ</p>
+        <h1 class="bloom-message" data-config="message">
+          Prensesler Günün Kutlu Olsun En Güzelim
+        </h1>
       </div>
     </section>
-
-    <!-- SAHNE 6: FİNAL - PRENSES TACINI TAK & KUTLAMAYI BAŞLAT -->
-    <section id="finale-section" class="section-block finale-section reveal-on-scroll">
-      <div id="finale-invite" class="finale-invite">
-        <div class="finale-mini-wreath" data-chrysanthemum="rose" data-size="88" aria-hidden="true"></div>
-        <span class="section-eyebrow">GÜNÜN KRALİÇESİNE SON SÜRPRİZ</span>
-        <h2 class="section-title">Tacını Takmaya Hazır Mısın?</h2>
-        <p class="section-subtitle">
-          18 Kasım Dünya Prensesler Günü'nün en ışıltılı anını başlatmak için aşağıdaki butona dokun...
-        </p>
-        <button type="button" id="crown-celebrate-btn" class="btn-royal btn-crown">
-          Prenses Tacını Tak 👑
-        </button>
-      </div>
-
-      <div id="royal-certificate" class="royal-certificate is-hidden" aria-hidden="true">
-        <div class="certificate-crown-stage" aria-hidden="true">
-          <div class="cert-wreath-left" data-chrysanthemum="gold" data-size="76"></div>
-          <div class="cert-crown-drop">
-            <svg viewBox="0 0 180 120" class="cert-crown-svg">
-              <circle cx="28" cy="40" r="5.5" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <circle cx="56" cy="25" r="6" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <circle cx="90" cy="15" r="7.5" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.8" />
-              <circle cx="124" cy="25" r="6" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <circle cx="152" cy="40" r="5.5" fill="#FFF8EC" stroke="#D4AF37" stroke-width="1.5" />
-              <path
-                d="M32 88 L28 45 L55 64 L57 31 L77 56 L90 22 L103 56 L123 31 L125 64 L152 45 L148 88 Z"
-                fill="url(#gold-foil-grad)"
-                stroke="#9E7418"
-                stroke-width="1.5"
-                stroke-linejoin="round"
-              />
-              <rect x="29" y="86" width="122" height="14" rx="7" fill="url(#gold-foil-grad)" stroke="#9E7418" stroke-width="1.4" />
-              <ellipse cx="90" cy="64" rx="7.5" ry="10" fill="url(#crown-gem-grad)" stroke="#FFF7DF" stroke-width="1.3" />
-              <circle cx="58" cy="70" r="4.5" fill="url(#crown-gem-grad)" stroke="#FFF7DF" stroke-width="1" />
-              <circle cx="122" cy="70" r="4.5" fill="url(#crown-gem-grad)" stroke="#FFF7DF" stroke-width="1" />
-            </svg>
-          </div>
-          <div class="cert-wreath-right" data-chrysanthemum="rose" data-size="76"></div>
-        </div>
-
-        <span class="cert-eyebrow">18 KASIM DÜNYA PRENSESLER GÜNÜ ÖZEL BERATI</span>
-        <h3 class="cert-title" data-config="princessTitle">Benim Güzel Prensesim</h3>
-        <p class="cert-text" data-config="finaleMessage">
-          Bu berat; kalbimin tek sahibi, Kasım ayımın en güzel kasımpatısı ve ömrümün en değerli masalına
-          sonsuz sevgi, hayranlık ve sadakatle sunulmuştur. Dünya Prensesler Günün kutlu olsun!
-        </p>
-
-        <div class="cert-seal-row">
-          <div class="cert-stamp">SONSUZ SEVGİYLE<br />MÜHÜRLENDİ</div>
-        </div>
-
-        <div class="cert-actions">
-          <button type="button" id="replay-celebration-btn" class="btn-royal btn-secondary">
-            Kutlamayı Tekrarla ✨
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <p data-config="footerNote">18 Kasım Dünya Prensesler Günü • Sevgi ve Kasımpatılarla Hazırlandı 🌸</p>
-    </footer>
   </main>
 
   <script src="script.js"></script>
